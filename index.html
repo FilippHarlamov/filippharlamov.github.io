@@ -1,12 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Приложение Цветок</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Цветок — Твой помощник по уходу за растениями</title>
+    <style>
+        :root {
+            --primary-color: #2e7d32;
+            --accent-color: #81c784;
+            --text-color: #333;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f1f8e9;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            flex: 1;
+            text-align: center;
+        }
+        h1 { margin: 0; font-size: 2.5em; }
+        .tagline { font-size: 1.2em; opacity: 0.9; margin-top: 10px; }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .feature-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .feature-card h3 { color: var(--primary-color); margin-top: 0; }
+        footer {
+            background: #fff;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+        }
+        .btn-policy {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background 0.3s;
+        }
+        .btn-policy:hover { background-color: #1b5e20; }
+        .links a { color: #666; text-decoration: none; font-size: 0.9em; }
+        .links a:hover { text-decoration: underline; }
+    </style>
 </head>
 <body>
-    <h1>Приложение «Цветок»</h1>
-    <p>Ваш личный помощник по уходу за растениями.</p>
-    <p><a href="privacy.html">Политика конфиденциальности</a></p>
+
+    <header>
+        <h1>Приложение «Цветок»</h1>
+        <div class="tagline">Твой личный дневник растений и умная диагностика</div>
+    </header>
+
+    <div class="container">
+        <h2>Заботьтесь о растениях профессионально</h2>
+        <p>Напоминания о поливе, анализ здоровья через камеру и удобный каталог ваших зеленых друзей — всё в одном приложении.</p>
+
+        <div class="features">
+            <div class="feature-card">
+                <h3>Дневник</h3>
+                <p>Удобный список всех ваших домашних растений.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Полив</h3>
+                <p>Умные уведомления, которые не дадут забыть о воде.</p>
+            </div>
+            <div class="feature-card">
+                <h3>AI-Камера</h3>
+                <p>Анализ состояния листьев и рекомендации по уходу.</p>
+            </div>
+        </div>
+
+        <a href="privacy.html" class="btn-policy">Политика конфиденциальности</a>
+    </div>
+
+    <footer>
+        <div class="links">
+            <p>&copy; 2026 Филипп Харламов</p>
+            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="app-ads.txt">app-ads.txt</a>
+        </div>
+    </footer>
+
 </body>
 </html>
